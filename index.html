@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+	<head>
+		<title>Product Colorizer 1.0.1</title>
+		<link rel="stylesheet" type="text/css" href="jquery.productColorizer.css" />
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+		<script type="text/javascript" src="jquery.productColorizer.pack.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('.product').productColorizer();
+			});
+		</script>
+		<style type="text/css">
+			body {font-family: Helvetica, Arial, sans-serif;}
+			.product {position: relative;}
+		</style>
+	</head>
+	<body>
+		<div id="demo">
+			<h2>Demo</h2>
+			<p>Here is an example of the productColorizer in action.</p>
+			<div class="product">
+				<div class="product-img">
+					<img src="defualt.jpg" />
+					<img id="mask" class="mask" src="mask.png" />
+				</div>
+				<div class="swatch">
+					<a rel="255,255,255" href="#mask" title="White"><span>White</span></a>
+					<a rel="32,223,95" href="#mask" title="Green"><span>Green</span></a>
+					<a rel="255,211,8" href="#mask" title="Yellow"><span>Yellow</span></a>
+					<a rel="255,101,8" href="#mask" title="Orange"><span>Orange</span></a>
+					<a rel="16,200,255" href="#mask" title="Blue"><span>Blue</span></a>
+					<a rel="142,8,255" href="#mask" title="Purple"><span>Purple</span></a>
+					<a rel="245,25,45" href="#mask" title="Red"><span>Red</span></a>
+				</div>
+			</div>
+		</div><!-- /demo -->
+	</body>
+</html>
