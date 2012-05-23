@@ -1,0 +1,116 @@
+/*
+ * productColorizer - jQuery Plugin
+ * version: 1.1 May 2012
+ * @requires jQuery v1.6 or later
+ *
+ * Examples at http://nikorablin.com/sandbox/productColorizer/
+ * Free to use and abuse under the MIT license.
+ * http://www.opensource.org/licenses/mit-license.php
+ *
+ * Copyright 2012 Nik Korablin - nikorablin@gmail.com
+ *
+ */
+ 
+/* colorizer styles
+--------------------------------------------- */
+.mask {
+	position:absolute;
+	top:0;
+	left:0;
+}
+
+.secondary {
+	left:0;
+	top:0;
+    position: absolute;
+    z-index: 500;
+}
+
+/* swatch styles
+--------------------------------------------- */
+.swatch {
+	padding:5px 0;
+	position:relative;
+}
+
+.swatch:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+
+.swatch a {
+	display:block;
+	width:25px;
+	height:25px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	text-indent:100%;
+	white-space:nowrap;
+	overflow:hidden;
+	float:left;
+	margin:2px;
+	background-image: linear-gradient(bottom, rgb(181,181,181) 53%, rgb(235,235,235) 52%);
+	background-image: -o-linear-gradient(bottom, rgb(181,181,181) 53%, rgb(235,235,235) 52%);
+	background-image: -moz-linear-gradient(bottom, rgb(181,181,181) 53%, rgb(235,235,235) 52%);
+	background-image: -webkit-linear-gradient(bottom, rgb(181,181,181) 53%, rgb(235,235,235) 52%);
+	background-image: -ms-linear-gradient(bottom, rgb(181,181,181) 53%, rgb(235,235,235) 52%);
+}
+
+.swatch a span {
+	display:block;
+	height:100%;
+}
+
+.swatch a.active span {
+	border:2px solid yellow;
+	height:21px;
+}
+
+/* tooltip styles
+--------------------------------------------- */
+.colorizer-tooltip {
+	position:absolute;
+	padding:5px;
+	font-size:11px;
+	-moz-box-shadow:0 0 5px #666;
+	-webkit-box-shadow:0 0 5px #666;
+	box-shadow:0 0 5px #666;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	background:#fff;
+	top:34px;
+}
+
+.colorizer-pointer-up,.colorizer-pointer-up-inner {
+	position:absolute;
+	width:0;
+	height:0;
+	border-top-width:0;
+	background:none;
+}
+
+.colorizer-pointer-up {
+	border-left:4px solid #ccc;
+	border-right:4px solid #ccc;
+	border-bottom-width:14px;
+	top:7px;
+	right:auto;
+	left:50%;
+	margin-left:-7px;
+	box-shadow:0 0 3px #333;
+}
+
+.colorizer-pointer-up-inner {
+	border-left:5px solid transparent;
+	border-right:5px solid transparent;
+	border-bottom:7px solid white;
+	bottom:auto;
+	top:-14px;
+	left:-5px;
+}

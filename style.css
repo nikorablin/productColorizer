@@ -1,0 +1,314 @@
+/* css reset
+--------------------------------------------- */
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video {
+	margin:0;
+	padding:0;
+	border:0;
+	font-size:100%;
+	font:inherit;
+	vertical-align:baseline;
+	outline:none;
+}
+
+/* global + clear
+--------------------------------------------- */
+
+body {
+	background: url(images/body_bg.jpg);
+	font-family: 'Asap', sans-serif;
+	font-size:16px;
+}
+
+a {outline:none;}
+
+.container {width:800px; margin:0 auto; padding:20px;}
+
+.container p {line-height:2em; color:#444; margin:0.2em 0;}
+
+.container a {color:#13c562; text-decoration: none;}
+.container a:hover {border-bottom:1px solid #13c562;}
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+ 
+.clearfix {
+	display: inline-block;
+}
+ 
+html[xmlns] .clearfix {
+	display: block;
+}
+ 
+* html .clearfix {
+	height: 1%;
+}
+
+/* header
+--------------------------------------------- */
+
+h1 {
+	font-size:2em;
+	color:#333;
+	text-shadow:1px 1px 0 #fff;
+	font-weight: bold;
+}
+
+h1 sup {font-size:0.4em; font-weight: normal; font-family: Georgia, serif; color:#666; padding-bottom:20px;}
+
+#masthead {
+	background:url(images/border.png) repeat-x bottom left;
+	margin-top:20px;
+}
+
+#masthead a.logo {
+	background: url(images/logo.png) no-repeat;
+	width:154px;
+	height:85px;
+	display: block;
+	text-indent: 100%; white-space: nowrap; overflow: hidden;
+	float: right;
+	margin-top:-80px;
+}
+
+#masthead a.logo:hover {
+	border:none;
+}
+
+h2 {
+	font-size:1.5em;
+	color:#444;
+	font-weight: bold;
+}
+
+h3 {
+	font-size:1.2em;
+	color:#ff6600;
+	font-weight: bold;
+}
+
+/* intro
+--------------------------------------------- */
+
+#intro ul {list-style-type: none; padding:15px 0 0; font-weight: bold;}
+#intro li {margin:0.5em 0;}
+
+
+/* instructions
+--------------------------------------------- */
+
+#instructions li {margin:1em 0;}
+#instructions span.html-tag {font-family:  Consolas, Monaco, "Andale Mono", "Courier New", monospace; font-weight: bold; color:#13c562;}
+#instructions img {background: url(images/transp.gif);}
+
+
+/* demo
+--------------------------------------------- */
+.product-preview {
+	font-size:.85em;
+	color:#444;
+	margin:20px auto;
+	width:325px;
+	padding:25px;
+	-moz-box-shadow:0 0 3px #817962;
+	box-shadow:0 0 3px #817962;
+	background: #fff;
+}
+
+.product-preview h3,h4 {
+	margin:5px 0;
+	line-height:1em;
+}
+
+.product-preview h3 {
+	font-size:1.2em;
+	font-weight: bold;
+	margin-top:10px;
+}
+
+.product-preview h4 {
+	margin-top:10px;
+	color:#d6401d;
+	background:url(images/icon_color.png) no-repeat;
+	padding:1px 0 5px 18px;
+	font-size:1.2em;
+}
+
+.product-preview p {
+	margin:0;
+}
+
+.product-preview .product {
+	position:relative;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	background: #fff;
+	padding:1px;
+	border:1px solid #ccc;
+	width:320px;
+	height:400px;
+}
+
+.product-preview .product img {
+	top:1px;
+	left:1px;
+}
+
+.secondary {
+	top:0px !important;
+	left:2px !important;
+}
+
+/* options
+--------------------------------------------- */
+
+#options table {
+	margin:10px 0;
+	-moz-border-radius:5px;
+	border-radius:5px;
+	border-collapse: collapse;
+	color:#444;
+	border-left:1px solid #ccc;
+	border-top:1px solid #ccc;
+}
+
+#options th {
+	text-align: left;
+	font-weight: bold;
+}
+
+#options th, #options td {
+	padding:10px;
+	border-bottom:1px solid #ccc;
+	border-right:1px solid #ccc;
+}
+
+#options em {
+	font-style:italic;
+	color:#999;
+	font-size:0.85em;
+}
+
+/* download
+--------------------------------------------- */
+
+#license a.button, #license input {
+	padding:10px 30px;
+	display: block;
+	float:left;
+	color:#fff;
+	-moz-border-radius:5px;
+	border-radius:5px;
+	-moz-box-shadow:inset 0 1px 0 rgba(255,255,255,0.3);
+	box-shadow:inset 0 1px 0 rgba(255,255,255,0.5);
+	margin:20px 5px 0;
+}
+
+#license a#download {
+	background: #ec7126;
+	border:1px solid #db5300;
+	text-shadow:1px 1px 0 #db5300;
+}
+
+#license .donate {
+	background:#13c562;
+	border:1px solid #35a940;
+	text-shadow:1px 1px 0 #35a940;
+	cursor: pointer;
+	font-size:0.9em;
+}
+
+#license a#download:hover {
+	background-image: linear-gradient(bottom, rgb(232,132,75) 33%, rgb(236,114,38) 69%);
+	background-image: -o-linear-gradient(bottom, rgb(232,132,75) 33%, rgb(236,114,38) 69%);
+	background-image: -moz-linear-gradient(bottom, rgb(232,132,75) 33%, rgb(236,114,38) 69%);
+	background-image: -webkit-linear-gradient(bottom, rgb(232,132,75) 33%, rgb(236,114,38) 69%);
+	background-image: -ms-linear-gradient(bottom, rgb(232,132,75) 33%, rgb(236,114,38) 69%);
+}
+
+#license .donate:hover {
+	background-image: linear-gradient(bottom, rgb(65,196,122) 27%, rgb(19,197,99) 64%);
+	background-image: -o-linear-gradient(bottom, rgb(65,196,122) 27%, rgb(19,197,99) 64%);
+	background-image: -moz-linear-gradient(bottom, rgb(65,196,122) 27%, rgb(19,197,99) 64%);
+	background-image: -webkit-linear-gradient(bottom, rgb(65,196,122) 27%, rgb(19,197,99) 64%);
+	background-image: -ms-linear-gradient(bottom, rgb(65,196,122) 27%, rgb(19,197,99) 64%);
+}
+
+#license a.button:active {
+	margin-top:21px;
+	margin-bottom:-1px;
+}
+
+
+/* code
+--------------------------------------------- */
+code, pre {
+	font-family: Consolas, Monaco, "Andale Mono", "Courier New", monospace;
+	font-size: 14px;
+	white-space: pre-wrap;
+	overflow:auto;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+code {
+    padding: 0 3px;
+    line-height: 23px;
+}
+
+pre {
+	display: block;
+	padding: 10px 15px;
+	margin: 0 0 22px;
+	background-color: #fafae6;
+	border: 1px solid #ddd;
+    white-space: pre;
+    overflow:auto;
+    overflow-y: hidden; *padding-bottom: 20px; /* Remove vertical scrollbar on Ie6, IE7 */
+}
+
+@media screen {
+	.str { color: #080 }  /* string content */
+	.kwd { color: #008 }  /* a keyword */
+	.com { color: #800 }  /* a comment */
+	.typ { color: #606 }  /* a type name */
+	.lit { color: #066 }  /* a literal value */
+	/* punctuation, lisp open bracket, lisp close bracket */
+	.pun, .opn, .clo { color: #660 }
+	.tag { color: #008 }  /* a markup tag name */
+	.atn { color: #606 }  /* a markup attribute name */
+	.atv { color: #080 }  /* a markup attribute value */
+	.dec, .var { color: #606 }  /* a declaration; a variable name */
+	.fun { color: red }  /* a function name */
+}
+
+@media print, projection {
+	.str { color: #060 }
+	.kwd { color: #006; font-weight: bold }
+	.com { color: #600; font-style: italic }
+	.typ { color: #404; font-weight: bold }
+	.lit { color: #044 }
+	.pun, .opn, .clo { color: #440 }
+	.tag { color: #006; font-weight: bold }
+	.atn { color: #404 }
+	.atv { color: #060 }
+}
+
+/* footer
+--------------------------------------------- */
+
+#footer {
+	padding:30px 20px;
+	background:url(images/border.png) repeat-x top left;
+}
+
+#footer p {
+	font-size:0.85em;
+}
