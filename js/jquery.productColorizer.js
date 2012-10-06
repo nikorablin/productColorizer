@@ -1,20 +1,15 @@
 /*
  * productColorizer - jQuery Plugin
- * version: 1.1 May 2012
+ * version: 1.2 October 2012
  * @requires jQuery v1.6 or later
  *
  * Examples at http://nikorablin.com/sandbox/productColorizer/
  * Free to use and abuse under the MIT license.
  * http://www.opensource.org/licenses/mit-license.php
  *
- * Copyright 2012 Nik Korablin - nikorablin@gmail.com
- *
  */
 (function($){
     $.fn.productColorizer = function(options) {
-		
-		// secondary
-		
 		
 		// defaults
 		var defaults = {  
@@ -22,7 +17,6 @@
 			swatchTransparency: 0.75,
 			secondaryTransparency: 0.55,
 			swatchClass: '.swatch'
-			
 		};
 		// extend defaults
 		var options = $.extend(defaults, options); 
@@ -34,6 +28,7 @@
 			var obj = $(this);
 			var swatch = obj.find(o.swatchClass);
 			var swatches = obj.find(o.swatchClass + " a");
+			var mask = obj.find('.mask');
 			
 			// set swatch colors with the rel values
 			$(swatches).each(function(){
@@ -57,7 +52,7 @@
 				var mask = $(this).attr('href');
 				if($(mask).attr('role')) {
 					$(mask).empty();
-					var R = Raphael(mask.substring(1), 397, 400);
+					var R = Raphael(mask.substring(1), $(mask).width(), $(mask).height());
 			    	var style = {
 			            fill: "rgb(" + $(this).attr('rel') + ")",
 			            opacity: o.secondaryTransparency,
