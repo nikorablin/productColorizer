@@ -94,7 +94,7 @@
 			    var blue = parseInt(color[2]);
 			    
 			    var rgb = blue | (green << 8) | (red << 16);
-			    return rgb.toString(16);
+			    return (0x1000000 + rgb).toString(16).slice(1) // fix for colors whose values are 1 digit for IE <10
 			};
 			
 		});
